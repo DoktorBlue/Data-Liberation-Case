@@ -26,26 +26,26 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">HP-OMEN</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKW696SIODkO09jL23FKlqwAAAAACAAAAAAAQZgAAAAEAACAAAADld+qLtJ4z8xizytAhtfAKNaFUlW9litZOU19I/yWrtwAAAAAOgAAAAAIAACAAAAD3hsOyX7rrkZVSPKK+OABaXUE1gW0HeF4p6/742YTqJZAAAABlREs0YKqEL19OeBxf2oX2xAIpgPnzwYRlbxJ59kG+PQqGwIongFAh+k2UMPaimXlUHwNr3F1QZbmVBwiB0PEOzJYMC0Zc/WF31Mbci6lZHRNF8082Z9GCGq031lX3XkwzSgEvspUX6EWsSkcvTstNWdkhdgdFUBAmYCe5L/Byo2cdBgsVPXeW4h060Ktb7/NAAAAAK4uHW84ZuFoAbEiW4Op7vKXU81ZTuhnappMqLdWMWNrjjGBFI0+D76DOU58h810Ei4HK9Qhl4GUKD9HozTjEzw==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKW696SIODkO09jL23FKlqwAAAAACAAAAAAAQZgAAAAEAACAAAAA3KSBXqMT54DWp0Z5qTnZCCGPO5bkA8ViNDb0kfAQVNgAAAAAOgAAAAAIAACAAAACxExfLeromh5eEJ9PSZJ6lCwtCpeiTroOVmaxbJc8vcJAAAAAPFtRyBVeNvClJPZOYnrFL6nbhW+feCQns73GDJkKOWVT9ajHKBDk9SSOa80JcVWprijelXpios0OSTrn1jeHSb8VdGijj3GTrMc8hMTmsD5U0EorQl1rFVhZ4E2iL+rleLUhSGNHZCMxc5ve4bNvej4PqtnitAZFR8RYyLDcAQyatw9sp+1dDMVD2KDZslrRAAAAAdUago7Y6GLC1P80I+JtzolUEQTawjxiP+P19eBNAgfv2V5VH0uziDOBWKMZ2mp8Wwk0AyE41bajt3JYRTFAaEw==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
-          <SSIS:Package SSIS:Name="Package.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Implementation.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers />
         <SSIS:DeploymentInfo>
           <SSIS:ProjectConnectionParameters />
           <SSIS:PackageInfo>
-            <SSIS:PackageMetaData SSIS:Name="Package.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="Implementation.dtsx">
               <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{34EF5041-D518-41A0-A629-03228C30B675}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
+                <SSIS:Property SSIS:Name="ID">{815F55CB-18AA-4B3D-AC57-A3C06667D539}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Implementation</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">6</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">12</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{76846FF2-4BB2-4168-8687-691B11C9BC8C}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{436C7E34-7DB2-4605-BFBB-ACBD2BFE46A4}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -416,7 +416,7 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.MySQL.dil2@mysql-dil2.ConnectionString">
+                <SSIS:Parameter SSIS:Name="CM.MySQL.dil2 ODBC.ConnectionString">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -431,7 +431,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.MySQL.dil2@mysql-dil2.InitialCatalog">
+                <SSIS:Parameter SSIS:Name="CM.MySQL.dil2 ODBC.InitialCatalog">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -445,7 +445,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.MySQL.dil2@mysql-dil2.Password">
+                <SSIS:Parameter SSIS:Name="CM.MySQL.dil2 ODBC.Password">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -459,7 +459,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.MySQL.dil2@mysql-dil2.RetainSameConnection">
+                <SSIS:Parameter SSIS:Name="CM.MySQL.dil2 ODBC.RetainSameConnection">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -474,7 +474,7 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.MySQL.dil2@mysql-dil2.ServerName">
+                <SSIS:Parameter SSIS:Name="CM.MySQL.dil2 ODBC.ServerName">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -488,7 +488,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.MySQL.dil2@mysql-dil2.UserName">
+                <SSIS:Parameter SSIS:Name="CM.MySQL.dil2 ODBC.UserName">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -503,7 +503,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.mysql-dil2.ConnectionString">
+                <SSIS:Parameter SSIS:Name="CM.mysql-dil2.Net.ConnectionString">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -518,7 +518,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.mysql-dil2.InitialCatalog">
+                <SSIS:Parameter SSIS:Name="CM.mysql-dil2.Net.InitialCatalog">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -533,7 +533,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.mysql-dil2.Password">
+                <SSIS:Parameter SSIS:Name="CM.mysql-dil2.Net.Password">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -547,7 +547,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.mysql-dil2.RetainSameConnection">
+                <SSIS:Parameter SSIS:Name="CM.mysql-dil2.Net.RetainSameConnection">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -562,7 +562,7 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.mysql-dil2.ServerName">
+                <SSIS:Parameter SSIS:Name="CM.mysql-dil2.Net.ServerName">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -577,7 +577,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.mysql-dil2.UserName">
+                <SSIS:Parameter SSIS:Name="CM.mysql-dil2.Net.UserName">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>

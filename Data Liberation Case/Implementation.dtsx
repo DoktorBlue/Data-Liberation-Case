@@ -1,0 +1,2719 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/8/2018 7:17:13 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="HP-OMEN"
+  DTS:CreatorName="HP-OMEN\Burk"
+  DTS:DTSID="{815F55CB-18AA-4B3D-AC57-A3C06667D539}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3002.92"
+  DTS:LocaleID="1043"
+  DTS:ObjectName="Implementation"
+  DTS:PackageType="5"
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{436C7E34-7DB2-4605-BFBB-ACBD2BFE46A4}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Adressen]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{96219A7D-1CAF-486F-891D-C29D1460D07A}"
+      DTS:ObjectName="Adressen">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1043"
+          DTS:Unicode="True"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Burk\Documents\ING\Case\Postgres Dump\Adressen.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{2D9D3BA1-330C-441E-8A12-79B3E988623C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="location_id"
+              DTS:DTSID="{EB0CFB72-D5F2-44F0-9C5E-99459334FD7C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="language"
+              DTS:DTSID="{A134B942-7793-47AB-8615-D41B993A01AA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="suite"
+              DTS:DTSID="{AE22C0ED-38D2-47D3-A31D-4C6F4BEE2B62}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="floor"
+              DTS:DTSID="{6AD12EB6-2135-43A8-ADFE-C02DC8EFB4D0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="building"
+              DTS:DTSID="{AB4EB70B-CF07-4630-B113-AD507BCD7F4E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="street_number"
+              DTS:DTSID="{93F06345-0F15-4DD3-8AB8-293B3B4E8C00}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="street_prefix"
+              DTS:DTSID="{37520AEC-4C5F-4ED8-90B3-DBA8D1F7EB23}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="street"
+              DTS:DTSID="{14C2D5F3-4CB6-49C2-8DAA-9898C3580B61}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="street_suffix"
+              DTS:DTSID="{FE603717-C98E-41E7-9494-99D2873F2A50}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="neighborhood"
+              DTS:DTSID="{41D13EF3-7846-40A8-9957-33FDE1ECEF5A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="district"
+              DTS:DTSID="{CAE39CFC-77D1-45FB-848E-C5C38A8442E1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="locality"
+              DTS:DTSID="{5BB57DE3-2B81-4C77-902B-2AEB239D5E3A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="county"
+              DTS:DTSID="{AA384499-D08C-469B-9D98-D09C28B0CFFE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="region"
+              DTS:DTSID="{8739C4FE-7DDB-4765-8220-2D0B568099A2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="postal_code"
+              DTS:DTSID="{3688E17B-E1FA-4634-A4F7-D76CEFC2002E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country"
+              DTS:DTSID="{27B94B36-3ABB-49DB-9DF1-07E07A813794}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[affiliation_phases]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{4B48A874-FB01-44B3-8C44-66C2704BC1A9}"
+      DTS:ObjectName="affiliation_phases">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1043"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Burk\Documents\ING\Case\Postgres Dump\affiliation_phases.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{B30FA97E-C999-4AFB-B5BB-6C8B3FD8ADB7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="affiliation_id"
+              DTS:DTSID="{908C19DD-2B9C-4DA3-9F84-DC78073E2B95}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ancestor_affiliation_id"
+              DTS:DTSID="{D67C288E-428C-4BB0-84FA-A4A1ECE403BA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="start_season_id"
+              DTS:DTSID="{E4E6D1FD-66E1-4F6C-9DE8-D58E2EBA053B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="start_date_time"
+              DTS:DTSID="{17E17ACC-62A1-4B7C-936F-5031DD83473D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="end_season_id"
+              DTS:DTSID="{1FA45F62-027F-4503-BA44-434A2AA0D739}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="end_date_time"
+              DTS:DTSID="{781DE33B-5872-448D-B08D-CFAFD494BDB9}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[mysql-dil2.Net]"
+      DTS:CreationName="ADO.NET:MySql.Data.MySqlClient.MySqlConnection, MySql.Data, Version=6.10.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d"
+      DTS:DTSID="{CDC8CCF4-3688-4DC1-96F0-B31BA7618B23}"
+      DTS:ObjectName="mysql-dil2.Net">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="server=mysql-dil2.mysql.database.azure.com;user id=dil2@mysql-dil2;Initial Catalog=dil1;">
+          <DTS:Password
+            DTS:Name="password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKW696SIODkO09jL23FKlqwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACaCLpkesO6BZiDpgws7qMLvkebL3VLeoOB1uRUFPfgcQAAAAAOgAAAAAIAACAAAAB0rSl631yjW067JSUKN5Jv/xfpQG2Ls268MwpSsp7MzyAAAADfB7FBSaa9axYlrUTYvCg96HAWOg/a8+B5p1pGwoEyTkAAAACaTpcRv1Kff1Hy0M9eMIYUzZzhekPRzX2S16u3UDzdKc6U1gmvYSG3aWCf5+dSqUqA8jUARuE7Jz2OYNuTZWi3</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MySQL.dil2 ODBC]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{38BA8BB9-A040-4F29-9B49-FFC001A69979}"
+      DTS:ObjectName="MySQL.dil2 ODBC">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="uid=dil2@mysql-dil2;Dsn=MySQL;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKW696SIODkO09jL23FKlqwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADGVXxWNrEtbeBvPGOnFHstReS/PIJtOBSc3RmKP8BBugAAAAAOgAAAAAIAACAAAAAfz4vOG7pHWERJNv0QGK7/QZHrG/Rrsr2iwOb5cAcM4SAAAABpBeJJ0kWeb0GevICEremlrf90ClKxhDJSRjkE/FRYnUAAAADrsRgRXZ2IRHmziTPUBXNQUCm4Omp81zZtgYovn+J/uwmjww4MS6vdswmcedyH++SGYj6AngkHfXNvUZtSvHBB</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PostgreSql-dil1]"
+      DTS:CreationName="DevartPostgreSql"
+      DTS:DTSID="{16972F25-F7BD-48BD-B53D-8796C6ADA697}"
+      DTS:ObjectName="PostgreSql-dil1">
+      <DTS:ObjectData>
+        <PostgreSqlConnectionManager>
+          <ConnectionString>User Id=dil1@postgres-dil1.postgres.database.azure.com;Host=postgres-dil1.postgres.database.azure.com;Database=sdb;Persist Security Info=True;SSLMode=Allow</ConnectionString>
+          <Password
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKW696SIODkO09jL23FKlqwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACEYnDoQ4BKvdmlXqGyxLvpIOL1e497SWgWjWWs8LvwoQAAAAAOgAAAAAIAACAAAAAkIDexP45c3+GJ7mIeKS7lrwgcHTjT4vM7KEjYUHNaVyAAAACnOIrAa2M4dMe38MnJY1/kUjwIU2bPyFzTOkPW7UjbNUAAAABwiRFWqDiJFWCwKuQJLYOcCZlMtvd2etW6ocamrlSJY8itMNaxcPV0dAtox2A7i6GxaSh5FDddXtKZkxQe/ui7</Password>
+        </PostgreSqlConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Sales.csv]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{0E6CC429-A96C-42FA-B78D-371127B95B8D}"
+      DTS:ObjectName="Sales.csv">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1043"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Burk\Documents\ING\Case\sales.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="33"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Region"
+              DTS:DTSID="{D784B937-E661-49DF-A239-4A32BE2B5D6C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="32"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country"
+              DTS:DTSID="{C15BBBAE-181B-46D4-8D18-30DF98F4F8E1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Item Type"
+              DTS:DTSID="{66CCCB81-13BB-43BE-875C-352D82363AA5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="7"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sales Channel"
+              DTS:DTSID="{DE96FC8D-FC6F-4FDC-99C1-8EF291960C8D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Order Priority"
+              DTS:DTSID="{32219A57-43D2-4BAD-A2F4-3932EF3EF656}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Order Date"
+              DTS:DTSID="{5C2EE134-4604-49C3-A0C6-365A3D72086F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Order ID"
+              DTS:DTSID="{2C23CE37-128F-4BFF-9912-81CF1C9C95E4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ship Date"
+              DTS:DTSID="{5538A964-6E39-49DB-86FB-F2083670B3D5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Units Sold"
+              DTS:DTSID="{61E02D59-A7DD-4F01-B0ED-FC19F9C8E1C8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Unit Price"
+              DTS:DTSID="{70534B9E-3927-4E1A-9C48-82AC2A71EAED}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Unit Cost"
+              DTS:DTSID="{FA0E034E-1CD6-4B47-AE56-E9298A3349FC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total Revenue"
+              DTS:DTSID="{EF8E1004-5DFF-45EA-8C00-C4F08244F083}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total Cost"
+              DTS:DTSID="{2E0D0163-48E8-468F-B9A8-1F3C3E2661FE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total Profit"
+              DTS:DTSID="{72A8EEC5-C2B0-447A-BAEF-5EC9824F6115}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\1) From file to database"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{D32E9C66-4C8C-493B-A77A-F183CE4130B8}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="1) From file to database">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\1) From file to database\Load Sales to MySQL"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{92e03a24-3d7e-4739-ac04-7d02bf398ea6}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Load Sales to MySQL"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\1) From file to database\Load Sales to MySQL\Read Sales"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1043"
+                  name="Read Sales"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Sales.csv]"
+                      connectionManagerRefId="Package.ConnectionManagers[Sales.csv]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Region]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].ExternalColumns[Region]"
+                          length="33"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Region]"
+                          name="Region"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Country]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                          length="32"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Country]"
+                          name="Country"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Item Type]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].ExternalColumns[Item Type]"
+                          length="15"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Item Type]"
+                          name="Item Type"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Sales Channel]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].ExternalColumns[Sales Channel]"
+                          length="7"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Sales Channel]"
+                          name="Sales Channel"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Order Priority]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].ExternalColumns[Order Priority]"
+                          length="1"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Order Priority]"
+                          name="Order Priority"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Order Date]"
+                          dataType="date"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].ExternalColumns[Order Date]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Order Date]"
+                          name="Order Date"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Order ID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].ExternalColumns[Order ID]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Order ID]"
+                          name="Order ID"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Ship Date]"
+                          dataType="date"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].ExternalColumns[Ship Date]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Ship Date]"
+                          name="Ship Date"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Units Sold]"
+                          dataType="i2"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].ExternalColumns[Units Sold]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Units Sold]"
+                          name="Units Sold"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Unit Price]"
+                          dataType="cy"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].ExternalColumns[Unit Price]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Unit Price]"
+                          name="Unit Price"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Unit Cost]"
+                          dataType="cy"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].ExternalColumns[Unit Cost]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Unit Cost]"
+                          name="Unit Cost"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Total Revenue]"
+                          dataType="cy"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].ExternalColumns[Total Revenue]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Total Revenue]"
+                          name="Total Revenue"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Total Cost]"
+                          dataType="cy"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].ExternalColumns[Total Cost]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Total Cost]"
+                          name="Total Cost"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Total Profit]"
+                          dataType="cy"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].ExternalColumns[Total Profit]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Total Profit]"
+                          name="Total Profit"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].ExternalColumns[Region]"
+                          codePage="1252"
+                          dataType="str"
+                          length="33"
+                          name="Region" />
+                        <externalMetadataColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                          codePage="1252"
+                          dataType="str"
+                          length="32"
+                          name="Country" />
+                        <externalMetadataColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].ExternalColumns[Item Type]"
+                          codePage="1252"
+                          dataType="str"
+                          length="15"
+                          name="Item Type" />
+                        <externalMetadataColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].ExternalColumns[Sales Channel]"
+                          codePage="1252"
+                          dataType="str"
+                          length="7"
+                          name="Sales Channel" />
+                        <externalMetadataColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].ExternalColumns[Order Priority]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="Order Priority" />
+                        <externalMetadataColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].ExternalColumns[Order Date]"
+                          dataType="date"
+                          name="Order Date" />
+                        <externalMetadataColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].ExternalColumns[Order ID]"
+                          dataType="i4"
+                          name="Order ID" />
+                        <externalMetadataColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].ExternalColumns[Ship Date]"
+                          dataType="date"
+                          name="Ship Date" />
+                        <externalMetadataColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].ExternalColumns[Units Sold]"
+                          dataType="i2"
+                          name="Units Sold" />
+                        <externalMetadataColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].ExternalColumns[Unit Price]"
+                          dataType="cy"
+                          name="Unit Price" />
+                        <externalMetadataColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].ExternalColumns[Unit Cost]"
+                          dataType="cy"
+                          name="Unit Cost" />
+                        <externalMetadataColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].ExternalColumns[Total Revenue]"
+                          dataType="cy"
+                          name="Total Revenue" />
+                        <externalMetadataColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].ExternalColumns[Total Cost]"
+                          dataType="cy"
+                          name="Total Cost" />
+                        <externalMetadataColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].ExternalColumns[Total Profit]"
+                          dataType="cy"
+                          name="Total Profit" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\1) From file to database\Load Sales to MySQL\Sales"
+                  componentClassID="Attunity.SSISODBCDst"
+                  contactInfo="ODBC Destination;Connector for Open Database Connectivity (ODBC) by Attunity; Attunity Ltd.; All Rights Reserved; http://www.attunity.com;7"
+                  description="ODBC Destination"
+                  name="Sales"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The method used for inserting data. Possible values are 'Batch' or 'Row by row'."
+                      expressionType="Notify"
+                      name="InsertMethod"
+                      typeConverter="InsertMethod">1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                      expressionType="Notify"
+                      name="BindCharColumnsAs"
+                      typeConverter="BindCharColumnsAs">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The ODBC C data type for binding numeric data."
+                      expressionType="Notify"
+                      name="BindNumericAs"
+                      typeConverter="BindNumericAs">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Destination table"
+                      expressionType="Notify"
+                      name="TableName">`sales`</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specify the number of rows inserted per batch."
+                      expressionType="Notify"
+                      name="BatchSize">1000</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of rows inserted under the same transaction."
+                      expressionType="Notify"
+                      name="TransactionSize">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Determines the chunk size allocation for LOB columns"
+                      expressionType="Notify"
+                      name="LobChunkSize">32768</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                      expressionType="Notify"
+                      name="StatementTimeout">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The code page to use when code page information is unavailable from the data source."
+                      expressionType="Notify"
+                      name="DefaultCodePage">1252</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\1) From file to database\Load Sales to MySQL\Sales.Connections[ODBCConnection]"
+                      connectionManagerID="Package.ConnectionManagers[MySQL.dil2 ODBC]"
+                      connectionManagerRefId="Package.ConnectionManagers[MySQL.dil2 ODBC]"
+                      description="The ODBC runtime connection"
+                      name="ODBCConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="ODBC Destination Input"
+                      truncationRowDisposition="FailComponent">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].Columns[Region]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="33"
+                          cachedName="Region"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Region]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Region]" />
+                        <inputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].Columns[Country]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="32"
+                          cachedName="Country"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Country]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Country]" />
+                        <inputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].Columns[Item Type]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="15"
+                          cachedName="Item Type"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Item Type]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Item Type]" />
+                        <inputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].Columns[Sales Channel]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="7"
+                          cachedName="Sales Channel"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Sales Channel]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Sales Channel]" />
+                        <inputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].Columns[Order Priority]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="1"
+                          cachedName="Order Priority"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Order Priority]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Order Priority]" />
+                        <inputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].Columns[Order Date]"
+                          cachedDataType="date"
+                          cachedName="Order Date"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Order Date]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Order Date]" />
+                        <inputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].Columns[Order ID]"
+                          cachedDataType="i4"
+                          cachedName="Order ID"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Order ID]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Order ID]" />
+                        <inputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].Columns[Ship Date]"
+                          cachedDataType="date"
+                          cachedName="Ship Date"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Ship Date]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Ship Date]" />
+                        <inputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].Columns[Units Sold]"
+                          cachedDataType="i2"
+                          cachedName="Units Sold"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Units Sold]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Units Sold]" />
+                        <inputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].Columns[Unit Price]"
+                          cachedDataType="cy"
+                          cachedName="Unit Price"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Unit Price]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Unit Price]" />
+                        <inputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].Columns[Unit Cost]"
+                          cachedDataType="cy"
+                          cachedName="Unit Cost"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Unit Cost]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Unit Cost]" />
+                        <inputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].Columns[Total Revenue]"
+                          cachedDataType="cy"
+                          cachedName="Total Revenue"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Total Revenue]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Total Revenue]" />
+                        <inputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].Columns[Total Cost]"
+                          cachedDataType="cy"
+                          cachedName="Total Cost"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Total Cost]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Total Cost]" />
+                        <inputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].Columns[Total Profit]"
+                          cachedDataType="cy"
+                          cachedName="Total Profit"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Total Profit]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output].Columns[Total Profit]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Region]"
+                          codePage="1252"
+                          dataType="str"
+                          length="33"
+                          name="Region" />
+                        <externalMetadataColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Country]"
+                          codePage="1252"
+                          dataType="str"
+                          length="32"
+                          name="Country" />
+                        <externalMetadataColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Item Type]"
+                          codePage="1252"
+                          dataType="str"
+                          length="15"
+                          name="Item Type" />
+                        <externalMetadataColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Sales Channel]"
+                          codePage="1252"
+                          dataType="str"
+                          length="7"
+                          name="Sales Channel" />
+                        <externalMetadataColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Order Priority]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="Order Priority" />
+                        <externalMetadataColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Order Date]"
+                          dataType="dbTimeStamp"
+                          name="Order Date" />
+                        <externalMetadataColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Order ID]"
+                          dataType="i4"
+                          name="Order ID" />
+                        <externalMetadataColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Ship Date]"
+                          dataType="dbTimeStamp"
+                          name="Ship Date" />
+                        <externalMetadataColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Units Sold]"
+                          dataType="i2"
+                          name="Units Sold" />
+                        <externalMetadataColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Unit Price]"
+                          dataType="numeric"
+                          name="Unit Price"
+                          precision="10"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Unit Cost]"
+                          dataType="numeric"
+                          name="Unit Cost"
+                          precision="10"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Total Revenue]"
+                          dataType="numeric"
+                          name="Total Revenue"
+                          precision="10"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Total Cost]"
+                          dataType="numeric"
+                          name="Total Cost"
+                          precision="10"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Total Profit]"
+                          dataType="numeric"
+                          name="Total Profit"
+                          precision="10"
+                          scale="2" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output]"
+                      isErrorOut="true"
+                      name="ODBC Destination Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[Region]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Region]"
+                          length="33"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[Region]"
+                          name="Region" />
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[Country]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Country]"
+                          length="32"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[Country]"
+                          name="Country" />
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[Item Type]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Item Type]"
+                          length="15"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[Item Type]"
+                          name="Item Type" />
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[Sales Channel]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Sales Channel]"
+                          length="7"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[Sales Channel]"
+                          name="Sales Channel" />
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[Order Priority]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Order Priority]"
+                          length="1"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[Order Priority]"
+                          name="Order Priority" />
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[Order Date]"
+                          dataType="dbTimeStamp"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Order Date]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[Order Date]"
+                          name="Order Date" />
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[Order ID]"
+                          dataType="i4"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Order ID]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[Order ID]"
+                          name="Order ID" />
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[Ship Date]"
+                          dataType="dbTimeStamp"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Ship Date]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[Ship Date]"
+                          name="Ship Date" />
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[Units Sold]"
+                          dataType="i2"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Units Sold]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[Units Sold]"
+                          name="Units Sold" />
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[Unit Price]"
+                          dataType="numeric"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Unit Price]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[Unit Price]"
+                          name="Unit Price"
+                          precision="10"
+                          scale="2" />
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[Unit Cost]"
+                          dataType="numeric"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Unit Cost]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[Unit Cost]"
+                          name="Unit Cost"
+                          precision="10"
+                          scale="2" />
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[Total Revenue]"
+                          dataType="numeric"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Total Revenue]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[Total Revenue]"
+                          name="Total Revenue"
+                          precision="10"
+                          scale="2" />
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[Total Cost]"
+                          dataType="numeric"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Total Cost]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[Total Cost]"
+                          name="Total Cost"
+                          precision="10"
+                          scale="2" />
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[Total Profit]"
+                          dataType="numeric"
+                          externalMetadataColumnId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input].ExternalColumns[Total Profit]"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[Total Profit]"
+                          name="Total Profit"
+                          precision="10"
+                          scale="2" />
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\1) From file to database\Load Sales to MySQL\Sales.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\1) From file to database\Load Sales to MySQL.Paths[Flat File Source Output]"
+                  endId="Package\1) From file to database\Load Sales to MySQL\Sales.Inputs[ODBC Destination Input]"
+                  name="Flat File Source Output"
+                  startId="Package\1) From file to database\Load Sales to MySQL\Read Sales.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\1) From file to database\Prepare Sales"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{dc48e2f2-2342-405b-9ee2-8353ae2639fb}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Prepare Sales"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{CDC8CCF4-3688-4DC1-96F0-B31BA7618B23}"
+              SQLTask:SqlStatementSource="DROP TABLE dil1.Sales;&#xA;CREATE TABLE dil1.Sales (&#xA;    `Region` VARCHAR(33),&#xA;    `Country` VARCHAR(32),&#xA;    `Item Type` VARCHAR(15),&#xA;    `Sales Channel` VARCHAR(7),&#xA;    `Order Priority` VARCHAR(1),&#xA;    `Order Date` DATETIME,&#xA;    `Order ID` INT,&#xA;    `Ship Date` DATETIME,&#xA;    `Units Sold` SMALLINT,&#xA;    `Unit Price` Decimal(10,2),&#xA;    `Unit Cost` Decimal(10,2),&#xA;    `Total Revenue` Decimal(10,2),&#xA;    `Total Cost` Decimal(10,2),&#xA;    `Total Profit` Decimal(10,2)&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\1) From file to database.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{B772214B-CCB6-4208-AB25-B810096F9116}"
+          DTS:From="Package\1) From file to database\Prepare Sales"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\1) From file to database\Load Sales to MySQL" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\2) Postgres to file"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{81F30A27-AF49-4501-AEC2-5E2130FD42B2}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="2) Postgres to file">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\2) Postgres to file\Dump Progres"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{8a42f2b7-3225-45b9-81f1-45a60a4da816}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Dump Progres"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\2) Postgres to file\Dump Progres\Dump Adressen"
+                  componentClassID="Microsoft.FlatFileDestination"
+                  contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Flat File Destination"
+                  localeId="1043"
+                  name="Dump Adressen">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether the data will overwrite or append to the destination file."
+                      name="Overwrite">true</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the text to write to the destination file before any data is written."
+                      expressionType="Notify"
+                      name="Header" />
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Adressen]"
+                      connectionManagerRefId="Package.ConnectionManagers[Adressen]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input]"
+                      hasSideEffects="true"
+                      name="Flat File Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].Columns[id]"
+                          cachedDataType="i4"
+                          cachedName="id"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[id]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[id]" />
+                        <inputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].Columns[location_id]"
+                          cachedDataType="i4"
+                          cachedName="location_id"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[location_id]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[location_id]" />
+                        <inputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].Columns[language]"
+                          cachedDataType="wstr"
+                          cachedLength="100"
+                          cachedName="language"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[language]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[language]" />
+                        <inputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].Columns[suite]"
+                          cachedDataType="wstr"
+                          cachedLength="100"
+                          cachedName="suite"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[suite]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[suite]" />
+                        <inputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].Columns[floor]"
+                          cachedDataType="wstr"
+                          cachedLength="100"
+                          cachedName="floor"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[floor]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[floor]" />
+                        <inputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].Columns[building]"
+                          cachedDataType="wstr"
+                          cachedLength="100"
+                          cachedName="building"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[building]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[building]" />
+                        <inputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].Columns[street_number]"
+                          cachedDataType="wstr"
+                          cachedLength="100"
+                          cachedName="street_number"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[street_number]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[street_number]" />
+                        <inputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].Columns[street_prefix]"
+                          cachedDataType="wstr"
+                          cachedLength="100"
+                          cachedName="street_prefix"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[street_prefix]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[street_prefix]" />
+                        <inputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].Columns[street]"
+                          cachedDataType="wstr"
+                          cachedLength="100"
+                          cachedName="street"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[street]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[street]" />
+                        <inputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].Columns[street_suffix]"
+                          cachedDataType="wstr"
+                          cachedLength="100"
+                          cachedName="street_suffix"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[street_suffix]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[street_suffix]" />
+                        <inputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].Columns[neighborhood]"
+                          cachedDataType="wstr"
+                          cachedLength="100"
+                          cachedName="neighborhood"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[neighborhood]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[neighborhood]" />
+                        <inputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].Columns[district]"
+                          cachedDataType="wstr"
+                          cachedLength="100"
+                          cachedName="district"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[district]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[district]" />
+                        <inputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].Columns[locality]"
+                          cachedDataType="wstr"
+                          cachedLength="100"
+                          cachedName="locality"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[locality]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[locality]" />
+                        <inputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].Columns[county]"
+                          cachedDataType="wstr"
+                          cachedLength="100"
+                          cachedName="county"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[county]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[county]" />
+                        <inputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].Columns[region]"
+                          cachedDataType="wstr"
+                          cachedLength="100"
+                          cachedName="region"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[region]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[region]" />
+                        <inputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].Columns[postal_code]"
+                          cachedDataType="wstr"
+                          cachedLength="100"
+                          cachedName="postal_code"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[postal_code]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[postal_code]" />
+                        <inputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].Columns[country]"
+                          cachedDataType="wstr"
+                          cachedLength="100"
+                          cachedName="country"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[country]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[country]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[id]"
+                          dataType="i4"
+                          name="id" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[location_id]"
+                          dataType="i4"
+                          name="location_id" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[language]"
+                          dataType="wstr"
+                          length="100"
+                          name="language" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[suite]"
+                          dataType="wstr"
+                          length="100"
+                          name="suite" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[floor]"
+                          dataType="wstr"
+                          length="100"
+                          name="floor" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[building]"
+                          dataType="wstr"
+                          length="100"
+                          name="building" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[street_number]"
+                          dataType="wstr"
+                          length="100"
+                          name="street_number" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[street_prefix]"
+                          dataType="wstr"
+                          length="100"
+                          name="street_prefix" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[street]"
+                          dataType="wstr"
+                          length="100"
+                          name="street" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[street_suffix]"
+                          dataType="wstr"
+                          length="100"
+                          name="street_suffix" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[neighborhood]"
+                          dataType="wstr"
+                          length="100"
+                          name="neighborhood" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[district]"
+                          dataType="wstr"
+                          length="100"
+                          name="district" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[locality]"
+                          dataType="wstr"
+                          length="100"
+                          name="locality" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[county]"
+                          dataType="wstr"
+                          length="100"
+                          name="county" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[region]"
+                          dataType="wstr"
+                          length="100"
+                          name="region" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[postal_code]"
+                          dataType="wstr"
+                          length="100"
+                          name="postal_code" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input].ExternalColumns[country]"
+                          dataType="wstr"
+                          length="100"
+                          name="country" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                </component>
+                <component
+                  refId="Package\2) Postgres to file\Dump Progres\Dump affiliation_phases"
+                  componentClassID="Microsoft.FlatFileDestination"
+                  contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Flat File Destination"
+                  localeId="1043"
+                  name="Dump affiliation_phases">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether the data will overwrite or append to the destination file."
+                      name="Overwrite">true</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the text to write to the destination file before any data is written."
+                      expressionType="Notify"
+                      name="Header" />
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\2) Postgres to file\Dump Progres\Dump affiliation_phases.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[affiliation_phases]"
+                      connectionManagerRefId="Package.ConnectionManagers[affiliation_phases]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\2) Postgres to file\Dump Progres\Dump affiliation_phases.Inputs[Flat File Destination Input]"
+                      hasSideEffects="true"
+                      name="Flat File Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump affiliation_phases.Inputs[Flat File Destination Input].Columns[id]"
+                          cachedDataType="i4"
+                          cachedName="id"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Dump affiliation_phases.Inputs[Flat File Destination Input].ExternalColumns[id]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].Columns[id]" />
+                        <inputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump affiliation_phases.Inputs[Flat File Destination Input].Columns[affiliation_id]"
+                          cachedDataType="i4"
+                          cachedName="affiliation_id"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Dump affiliation_phases.Inputs[Flat File Destination Input].ExternalColumns[affiliation_id]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].Columns[affiliation_id]" />
+                        <inputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump affiliation_phases.Inputs[Flat File Destination Input].Columns[ancestor_affiliation_id]"
+                          cachedDataType="i4"
+                          cachedName="ancestor_affiliation_id"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Dump affiliation_phases.Inputs[Flat File Destination Input].ExternalColumns[ancestor_affiliation_id]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].Columns[ancestor_affiliation_id]" />
+                        <inputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump affiliation_phases.Inputs[Flat File Destination Input].Columns[start_season_id]"
+                          cachedDataType="i4"
+                          cachedName="start_season_id"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Dump affiliation_phases.Inputs[Flat File Destination Input].ExternalColumns[start_season_id]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].Columns[start_season_id]" />
+                        <inputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump affiliation_phases.Inputs[Flat File Destination Input].Columns[start_date_time]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="start_date_time"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Dump affiliation_phases.Inputs[Flat File Destination Input].ExternalColumns[start_date_time]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].Columns[start_date_time]" />
+                        <inputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump affiliation_phases.Inputs[Flat File Destination Input].Columns[end_season_id]"
+                          cachedDataType="i4"
+                          cachedName="end_season_id"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Dump affiliation_phases.Inputs[Flat File Destination Input].ExternalColumns[end_season_id]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].Columns[end_season_id]" />
+                        <inputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump affiliation_phases.Inputs[Flat File Destination Input].Columns[end_date_time]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="end_date_time"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Dump affiliation_phases.Inputs[Flat File Destination Input].ExternalColumns[end_date_time]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].Columns[end_date_time]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump affiliation_phases.Inputs[Flat File Destination Input].ExternalColumns[id]"
+                          dataType="i4"
+                          name="id" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump affiliation_phases.Inputs[Flat File Destination Input].ExternalColumns[affiliation_id]"
+                          dataType="i4"
+                          name="affiliation_id" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump affiliation_phases.Inputs[Flat File Destination Input].ExternalColumns[ancestor_affiliation_id]"
+                          dataType="i4"
+                          name="ancestor_affiliation_id" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump affiliation_phases.Inputs[Flat File Destination Input].ExternalColumns[start_season_id]"
+                          dataType="i4"
+                          name="start_season_id" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump affiliation_phases.Inputs[Flat File Destination Input].ExternalColumns[start_date_time]"
+                          dataType="dbTimeStamp"
+                          name="start_date_time" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump affiliation_phases.Inputs[Flat File Destination Input].ExternalColumns[end_season_id]"
+                          dataType="i4"
+                          name="end_season_id" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Dump affiliation_phases.Inputs[Flat File Destination Input].ExternalColumns[end_date_time]"
+                          dataType="dbTimeStamp"
+                          name="end_date_time" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                </component>
+                <component
+                  refId="Package\2) Postgres to file\Dump Progres\Read Adressen"
+                  componentClassID="Microsoft.ManagedComponentHost"
+                  description="Extracts data from the PostgreSql database."
+                  name="Read Adressen">
+                  <properties>
+                    <property
+                      dataType="System.Null"
+                      name="DesignObject"
+                      typeConverter="NOTBROWSABLE" />
+                    <property
+                      dataType="System.Int32"
+                      description="Number of retries to call operation."
+                      name="Retry Count">5</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Waiting second before next retry."
+                      name="Retry Interval">1</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the SQL statement used by the component to extract data from PostgreSql."
+                      name="SelectStatement"
+                      UITypeEditor="Devart.SSIS.Common.Design.SourceSelectStmtEditor, Devart.SSIS.PostgreSql.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">SELECT * FROM addresses</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out. A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">30</property>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Devart.SSIS.PostgreSql.PgSqlSource, Devart.SSIS.PostgreSql.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Connections[Devart PostgreSql]"
+                      connectionManagerID="Package.ConnectionManagers[PostgreSql-dil1]"
+                      connectionManagerRefId="Package.ConnectionManagers[PostgreSql-dil1]"
+                      description="Devart PostgreSql Connection Manager"
+                      name="Devart PostgreSql" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output]"
+                      name="Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[id]"
+                          dataType="i4"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[id]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[id]"
+                          name="id" />
+                        <outputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[location_id]"
+                          dataType="i4"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[location_id]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[location_id]"
+                          name="location_id" />
+                        <outputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[language]"
+                          dataType="wstr"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[language]"
+                          length="100"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[language]"
+                          name="language" />
+                        <outputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[suite]"
+                          dataType="wstr"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[suite]"
+                          length="100"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[suite]"
+                          name="suite" />
+                        <outputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[floor]"
+                          dataType="wstr"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[floor]"
+                          length="100"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[floor]"
+                          name="floor" />
+                        <outputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[building]"
+                          dataType="wstr"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[building]"
+                          length="100"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[building]"
+                          name="building" />
+                        <outputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[street_number]"
+                          dataType="wstr"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[street_number]"
+                          length="100"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[street_number]"
+                          name="street_number" />
+                        <outputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[street_prefix]"
+                          dataType="wstr"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[street_prefix]"
+                          length="100"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[street_prefix]"
+                          name="street_prefix" />
+                        <outputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[street]"
+                          dataType="wstr"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[street]"
+                          length="100"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[street]"
+                          name="street" />
+                        <outputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[street_suffix]"
+                          dataType="wstr"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[street_suffix]"
+                          length="100"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[street_suffix]"
+                          name="street_suffix" />
+                        <outputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[neighborhood]"
+                          dataType="wstr"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[neighborhood]"
+                          length="100"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[neighborhood]"
+                          name="neighborhood" />
+                        <outputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[district]"
+                          dataType="wstr"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[district]"
+                          length="100"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[district]"
+                          name="district" />
+                        <outputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[locality]"
+                          dataType="wstr"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[locality]"
+                          length="100"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[locality]"
+                          name="locality" />
+                        <outputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[county]"
+                          dataType="wstr"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[county]"
+                          length="100"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[county]"
+                          name="county" />
+                        <outputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[region]"
+                          dataType="wstr"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[region]"
+                          length="100"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[region]"
+                          name="region" />
+                        <outputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[postal_code]"
+                          dataType="wstr"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[postal_code]"
+                          length="100"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[postal_code]"
+                          name="postal_code" />
+                        <outputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[country]"
+                          dataType="wstr"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[country]"
+                          length="100"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].Columns[country]"
+                          name="country" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[id]"
+                          dataType="i4"
+                          name="id" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[location_id]"
+                          dataType="i4"
+                          name="location_id" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[language]"
+                          dataType="wstr"
+                          length="100"
+                          name="language" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[suite]"
+                          dataType="wstr"
+                          length="100"
+                          name="suite" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[floor]"
+                          dataType="wstr"
+                          length="100"
+                          name="floor" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[building]"
+                          dataType="wstr"
+                          length="100"
+                          name="building" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[street_number]"
+                          dataType="wstr"
+                          length="100"
+                          name="street_number" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[street_prefix]"
+                          dataType="wstr"
+                          length="100"
+                          name="street_prefix" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[street]"
+                          dataType="wstr"
+                          length="100"
+                          name="street" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[street_suffix]"
+                          dataType="wstr"
+                          length="100"
+                          name="street_suffix" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[neighborhood]"
+                          dataType="wstr"
+                          length="100"
+                          name="neighborhood" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[district]"
+                          dataType="wstr"
+                          length="100"
+                          name="district" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[locality]"
+                          dataType="wstr"
+                          length="100"
+                          name="locality" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[county]"
+                          dataType="wstr"
+                          length="100"
+                          name="county" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[region]"
+                          dataType="wstr"
+                          length="100"
+                          name="region" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[postal_code]"
+                          dataType="wstr"
+                          length="100"
+                          name="postal_code" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output].ExternalColumns[country]"
+                          dataType="wstr"
+                          length="100"
+                          name="country" />
+                      </externalMetadataColumns>
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases"
+                  componentClassID="Microsoft.ManagedComponentHost"
+                  description="Extracts data from the PostgreSql database."
+                  name="Read affiliation_phases">
+                  <properties>
+                    <property
+                      dataType="System.Null"
+                      name="DesignObject"
+                      typeConverter="NOTBROWSABLE" />
+                    <property
+                      dataType="System.Int32"
+                      description="Number of retries to call operation."
+                      name="Retry Count">5</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Waiting second before next retry."
+                      name="Retry Interval">1</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the SQL statement used by the component to extract data from PostgreSql."
+                      name="SelectStatement"
+                      UITypeEditor="Devart.SSIS.Common.Design.SourceSelectStmtEditor, Devart.SSIS.PostgreSql.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701">SELECT * FROM affiliation_phases</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out. A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">30</property>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Devart.SSIS.PostgreSql.PgSqlSource, Devart.SSIS.PostgreSql.140, Version=1.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Connections[Devart PostgreSql]"
+                      connectionManagerID="Package.ConnectionManagers[PostgreSql-dil1]"
+                      connectionManagerRefId="Package.ConnectionManagers[PostgreSql-dil1]"
+                      description="Devart PostgreSql Connection Manager"
+                      name="Devart PostgreSql" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output]"
+                      name="Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].Columns[id]"
+                          dataType="i4"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].ExternalColumns[id]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].Columns[id]"
+                          name="id" />
+                        <outputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].Columns[affiliation_id]"
+                          dataType="i4"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].ExternalColumns[affiliation_id]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].Columns[affiliation_id]"
+                          name="affiliation_id" />
+                        <outputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].Columns[ancestor_affiliation_id]"
+                          dataType="i4"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].ExternalColumns[ancestor_affiliation_id]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].Columns[ancestor_affiliation_id]"
+                          name="ancestor_affiliation_id" />
+                        <outputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].Columns[start_season_id]"
+                          dataType="i4"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].ExternalColumns[start_season_id]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].Columns[start_season_id]"
+                          name="start_season_id" />
+                        <outputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].Columns[start_date_time]"
+                          dataType="dbTimeStamp"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].ExternalColumns[start_date_time]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].Columns[start_date_time]"
+                          name="start_date_time" />
+                        <outputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].Columns[end_season_id]"
+                          dataType="i4"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].ExternalColumns[end_season_id]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].Columns[end_season_id]"
+                          name="end_season_id" />
+                        <outputColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].Columns[end_date_time]"
+                          dataType="dbTimeStamp"
+                          externalMetadataColumnId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].ExternalColumns[end_date_time]"
+                          lineageId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].Columns[end_date_time]"
+                          name="end_date_time" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].ExternalColumns[id]"
+                          dataType="i4"
+                          name="id" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].ExternalColumns[affiliation_id]"
+                          dataType="i4"
+                          name="affiliation_id" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].ExternalColumns[ancestor_affiliation_id]"
+                          dataType="i4"
+                          name="ancestor_affiliation_id" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].ExternalColumns[start_season_id]"
+                          dataType="i4"
+                          name="start_season_id" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].ExternalColumns[start_date_time]"
+                          dataType="dbTimeStamp"
+                          name="start_date_time" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].ExternalColumns[end_season_id]"
+                          dataType="i4"
+                          name="end_season_id" />
+                        <externalMetadataColumn
+                          refId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output].ExternalColumns[end_date_time]"
+                          dataType="dbTimeStamp"
+                          name="end_date_time" />
+                      </externalMetadataColumns>
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\2) Postgres to file\Dump Progres.Paths[Source Output]"
+                  endId="Package\2) Postgres to file\Dump Progres\Dump Adressen.Inputs[Flat File Destination Input]"
+                  name="Source Output"
+                  startId="Package\2) Postgres to file\Dump Progres\Read Adressen.Outputs[Source Output]" />
+                <path
+                  refId="Package\2) Postgres to file\Dump Progres.Paths[Source Output1]"
+                  endId="Package\2) Postgres to file\Dump Progres\Dump affiliation_phases.Inputs[Flat File Destination Input]"
+                  name="Source Output"
+                  startId="Package\2) Postgres to file\Dump Progres\Read affiliation_phases.Outputs[Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\3) Upload to HDFS"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{77178941-397E-4086-BFF5-A3729F137E1D}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="3) Upload to HDFS">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\3) Upload to HDFS\Pump into HDFS"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{d09e2cc8-8829-4374-ba3d-253a65d657da}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Pump into HDFS"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\3) Upload to HDFS\Pump into HDFS\HDFS File Destination"
+                  componentClassID="Microsoft.ManagedComponentHost"
+                  description="Loads data into a file in HDFS. The supported file formats are: Text, Avro, Orc."
+                  name="HDFS File Destination"
+                  validateExternalMetadata="False">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="The name of HDFS file"
+                      expressionType="Notify"
+                      name="FilePath"></property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Column names in the first data row"
+                      expressionType="Notify"
+                      name="FirstRowAsColumnNames">false</property>
+                    <property
+                      dataType="System.String"
+                      description="The character used to delimit columns in text file"
+                      expressionType="Notify"
+                      name="ColumnDelimiter">,</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Enable batch mode"
+                      expressionType="Notify"
+                      name="IsBatchMode">true</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Batch size"
+                      expressionType="Notify"
+                      name="BatchSize">10000</property>
+                    <property
+                      dataType="System.Int32"
+                      description="File Format"
+                      expressionType="Notify"
+                      name="FileFormat">0</property>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">HdfsDest</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\3) Upload to HDFS\Pump into HDFS\HDFS File Destination.Connections[Hadoop Connection Manager]"
+                      name="Hadoop Connection Manager" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\3) Upload to HDFS\Pump into HDFS\HDFS File Destination.Inputs[Input]"
+                      hasSideEffects="true"
+                      name="Input">
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\3) Upload to HDFS\Pump into HDFS\HDFS File Destination.Inputs[Input].ExternalColumns[id]"
+                          dataType="i4"
+                          name="id" />
+                        <externalMetadataColumn
+                          refId="Package\3) Upload to HDFS\Pump into HDFS\HDFS File Destination.Inputs[Input].ExternalColumns[affiliation_id]"
+                          dataType="i4"
+                          name="affiliation_id" />
+                        <externalMetadataColumn
+                          refId="Package\3) Upload to HDFS\Pump into HDFS\HDFS File Destination.Inputs[Input].ExternalColumns[ancestor_affiliation_id]"
+                          dataType="i4"
+                          name="ancestor_affiliation_id" />
+                        <externalMetadataColumn
+                          refId="Package\3) Upload to HDFS\Pump into HDFS\HDFS File Destination.Inputs[Input].ExternalColumns[start_season_id]"
+                          dataType="i4"
+                          name="start_season_id" />
+                        <externalMetadataColumn
+                          refId="Package\3) Upload to HDFS\Pump into HDFS\HDFS File Destination.Inputs[Input].ExternalColumns[start_date_time]"
+                          dataType="dbTimeStamp"
+                          name="start_date_time" />
+                        <externalMetadataColumn
+                          refId="Package\3) Upload to HDFS\Pump into HDFS\HDFS File Destination.Inputs[Input].ExternalColumns[end_season_id]"
+                          dataType="i4"
+                          name="end_season_id" />
+                        <externalMetadataColumn
+                          refId="Package\3) Upload to HDFS\Pump into HDFS\HDFS File Destination.Inputs[Input].ExternalColumns[end_date_time]"
+                          dataType="dbTimeStamp"
+                          name="end_date_time" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                </component>
+                <component
+                  refId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1043"
+                  name="Read affiliation_phases"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">true</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[affiliation_phases]"
+                      connectionManagerRefId="Package.ConnectionManagers[affiliation_phases]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Output].Columns[id]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Output].ExternalColumns[id]"
+                          lineageId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Output].Columns[id]"
+                          name="id"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Output].Columns[affiliation_id]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Output].ExternalColumns[affiliation_id]"
+                          lineageId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Output].Columns[affiliation_id]"
+                          name="affiliation_id"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Output].Columns[ancestor_affiliation_id]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Output].ExternalColumns[ancestor_affiliation_id]"
+                          lineageId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Output].Columns[ancestor_affiliation_id]"
+                          name="ancestor_affiliation_id"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Output].Columns[start_season_id]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Output].ExternalColumns[start_season_id]"
+                          lineageId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Output].Columns[start_season_id]"
+                          name="start_season_id"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Output].Columns[start_date_time]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Output].ExternalColumns[start_date_time]"
+                          lineageId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Output].Columns[start_date_time]"
+                          name="start_date_time"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Output].Columns[end_season_id]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Output].ExternalColumns[end_season_id]"
+                          lineageId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Output].Columns[end_season_id]"
+                          name="end_season_id"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Output].Columns[end_date_time]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Output].ExternalColumns[end_date_time]"
+                          lineageId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Output].Columns[end_date_time]"
+                          name="end_date_time"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Output].ExternalColumns[id]"
+                          dataType="i4"
+                          name="id" />
+                        <externalMetadataColumn
+                          refId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Output].ExternalColumns[affiliation_id]"
+                          dataType="i4"
+                          name="affiliation_id" />
+                        <externalMetadataColumn
+                          refId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Output].ExternalColumns[ancestor_affiliation_id]"
+                          dataType="i4"
+                          name="ancestor_affiliation_id" />
+                        <externalMetadataColumn
+                          refId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Output].ExternalColumns[start_season_id]"
+                          dataType="i4"
+                          name="start_season_id" />
+                        <externalMetadataColumn
+                          refId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Output].ExternalColumns[start_date_time]"
+                          dataType="dbTimeStamp"
+                          name="start_date_time" />
+                        <externalMetadataColumn
+                          refId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Output].ExternalColumns[end_season_id]"
+                          dataType="i4"
+                          name="end_season_id" />
+                        <externalMetadataColumn
+                          refId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Output].ExternalColumns[end_date_time]"
+                          dataType="dbTimeStamp"
+                          name="end_date_time" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\3) Upload to HDFS\Pump into HDFS.Paths[Flat File Source Output]"
+                  endId="Package\3) Upload to HDFS\Pump into HDFS\HDFS File Destination.Inputs[Input]"
+                  name="Flat File Source Output"
+                  startId="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{38CD399F-3557-4CD3-A6B5-C4AB6D1661B7}"
+      DTS:From="Package\1) From file to database"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\2) Postgres to file" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{8A7771EB-4A01-4F21-BCAB-E52272DB2A18}"
+      DTS:From="Package\2) Postgres to file"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\3) Upload to HDFS" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="143,42"
+          Id="Package\1) From file to database\Prepare Sales"
+          TopLeft="37,16" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\1) From file to database\Load Sales to MySQL"
+          TopLeft="304,14" />
+        <EdgeLayout
+          Id="Package\1) From file to database.PrecedenceConstraints[Constraint]"
+          TopLeft="180,36">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="124,0"
+              Start="0,0"
+              End="116.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="116.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="510,95"
+          Size="510,138"
+          Id="Package\1) From file to database"
+          TopLeft="100,38" />
+        <NodeLayout
+          Size="146,42"
+          Id="Package\2) Postgres to file\Dump Progres"
+          TopLeft="50,20" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="505,91"
+          Size="505,134"
+          Id="Package\2) Postgres to file"
+          TopLeft="105,222" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\3) Upload to HDFS\Pump into HDFS"
+          TopLeft="38,22" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="502,111"
+          Size="502,154"
+          Id="Package\3) Upload to HDFS"
+          TopLeft="108,399" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="356.25,176">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46"
+              Start="0,0"
+              End="0,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="358.25,356">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43"
+              Start="0,0"
+              End="0,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\1) From file to database\Load Sales to MySQL">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="130,42"
+          Id="Package\1) From file to database\Load Sales to MySQL\Read Sales"
+          TopLeft="112,133" />
+        <NodeLayout
+          Size="103,42"
+          Id="Package\1) From file to database\Load Sales to MySQL\Sales"
+          TopLeft="423,132" />
+        <EdgeLayout
+          Id="Package\1) From file to database\Load Sales to MySQL.Paths[Flat File Source Output]"
+          TopLeft="242,153.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="181,0"
+              Start="0,0"
+              End="173.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="173.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\2) Postgres to file\Dump Progres">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="192,42"
+          Id="Package\2) Postgres to file\Dump Progres\Dump affiliation_phases"
+          TopLeft="501,236" />
+        <NodeLayout
+          Size="188,42"
+          Id="Package\2) Postgres to file\Dump Progres\Read affiliation_phases"
+          TopLeft="162,237" />
+        <NodeLayout
+          Size="149,42"
+          Id="Package\2) Postgres to file\Dump Progres\Read Adressen"
+          TopLeft="161,139" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\2) Postgres to file\Dump Progres\Dump Adressen"
+          TopLeft="500,138" />
+        <EdgeLayout
+          Id="Package\2) Postgres to file\Dump Progres.Paths[Source Output1]"
+          TopLeft="350,257.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="151,0"
+              Start="0,0"
+              End="143.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="143.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\2) Postgres to file\Dump Progres.Paths[Source Output]"
+          TopLeft="310,159.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="190,0"
+              Start="0,0"
+              End="182.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="182.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\3) Upload to HDFS\Pump into HDFS">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="181,42"
+          Id="Package\3) Upload to HDFS\Pump into HDFS\HDFS File Destination"
+          TopLeft="476,157" />
+        <NodeLayout
+          Size="188,42"
+          Id="Package\3) Upload to HDFS\Pump into HDFS\Read affiliation_phases"
+          TopLeft="74,157" />
+        <EdgeLayout
+          Id="Package\3) Upload to HDFS\Pump into HDFS.Paths[Flat File Source Output]"
+          TopLeft="262,178">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="214,0"
+              Start="0,0"
+              End="206.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="206.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
