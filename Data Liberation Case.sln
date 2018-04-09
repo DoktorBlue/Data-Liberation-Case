@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Data Liberation Case", "Data Liberation Case\Data Liberation Case.dtproj", "{B62468A3-CA64-40ED-8358-8F76DE47873D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Development|Any CPU = Development|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B62468A3-CA64-40ED-8358-8F76DE47873D}.Debug|Any CPU.ActiveCfg = Development
+		{B62468A3-CA64-40ED-8358-8F76DE47873D}.Debug|Any CPU.Build.0 = Development
+		{B62468A3-CA64-40ED-8358-8F76DE47873D}.Development|Any CPU.ActiveCfg = Development
+		{B62468A3-CA64-40ED-8358-8F76DE47873D}.Development|Any CPU.Build.0 = Development
+		{B62468A3-CA64-40ED-8358-8F76DE47873D}.Release|Any CPU.ActiveCfg = Development
+		{B62468A3-CA64-40ED-8358-8F76DE47873D}.Release|Any CPU.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4EF60858-2158-40A3-9A17-386245A7BF08}
+	EndGlobalSection
+EndGlobal
